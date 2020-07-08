@@ -19,9 +19,9 @@ btn_save_clean.addEventListener("click", cleanCheck);
 
 function setCookie() {
 	cookie_text="client_city= Ваш город - "+city.value+"; max-age=36000";
-	console.log("cookie_text", cookie_text);
+	//console.log("cookie_text", cookie_text);
   document.cookie = cookie_text;
-  console.log("document.cookie", document.cookie);
+  //console.log("document.cookie", document.cookie);
 }
 
 function delCookie() {
@@ -92,7 +92,7 @@ function getCheckedCheckBoxes() {
 function setCheckedCheckBoxes(){
   for (var index = 0; index < checkboxes.length; index++) {
     if (JSON.parse(localStorage.getItem(index))==1){
-      console.log(localStorage);
+      //console.log(localStorage);
       checkboxes[index].checked=true;
     }else{
       checkboxes[index].checked=false;
