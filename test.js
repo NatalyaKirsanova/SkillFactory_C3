@@ -18,7 +18,7 @@ btn_save_clean.addEventListener("click", cleanCheck);
 
 
 function setCookie() {
-	cookie_text="client_city= Ваш город - "+escape(city.value)+"; max-age=36000";
+	cookie_text="client_city= Ваш город - "+city.value+"; max-age=36000";
 	console.log("cookie_text", cookie_text);
   document.cookie = cookie_text;
   console.log("document.cookie", document.cookie);
@@ -27,7 +27,7 @@ function setCookie() {
 function delCookie() {
 
   city.value="";
-  cookie_text="client_city= Ваш город - "+unescape(city.value)+"; max-age=0";
+  cookie_text="client_city= Ваш город - "+city.value+"; max-age=0";
   console.log("cookie_text", cookie_text);
   document.cookie = cookie_text;
   console.log("document.cookie", document.cookie);
