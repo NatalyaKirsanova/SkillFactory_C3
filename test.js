@@ -28,9 +28,9 @@ function delCookie() {
 
   city.value="";
   cookie_text="client_city= Ваш город - "+city.value+"; max-age=0";
-  console.log("cookie_text", cookie_text);
+  //console.log("cookie_text", cookie_text);
   document.cookie = cookie_text;
-  console.log("document.cookie", document.cookie);
+  //console.log("document.cookie", document.cookie);
 }
 
 function delField() {
@@ -63,9 +63,9 @@ function cleanCheck(){
  localStorage.clear();
 for (var index = 0; index < checkboxes.length; index++) {
     checkboxes[index].disabled=false;
-    console.log(checkboxes[index]);
+    //console.log(checkboxes[index]);
   }
-  console.log(localStorage);
+  //console.log(localStorage);
 }
 
 
@@ -76,16 +76,16 @@ function getCheckedCheckBoxes() {
     if (checkboxes[index].checked) {
       checkboxesChecks[index] = true;
       localStorage.setItem(index,1);
-      console.log(localStorage);
+      //console.log(localStorage);
     }
     else {
       checkboxesChecks[index] = false;
       localStorage.setItem(index,0);
-      console.log(localStorage);
+      //console.log(localStorage);
     }
     checkboxes[index].disabled=true;
-    console.log(checkboxesChecks[index]);
-    console.log(localStorage);
+    //console.log(checkboxesChecks[index]);
+    //console.log(localStorage);
 
   }
 }
@@ -110,17 +110,17 @@ function init() {
   // console.log(localStorage);
   if (localStorage.length ==0){
 
-    console.log(localStorage.length);
+    //console.log(localStorage.length);
     
   } else{
-    console.log(localStorage.length);
-    console.log(localStorage);
+    //console.log(localStorage.length);
+    //console.log(localStorage);
     setCheckedCheckBoxes();
   }
   
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-	console.log('Готов!');
+	//console.log('Готов!');
 	init();
 }); 
